@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 70">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .7;
+      }
+
+      .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+
+      .cls-5 {
+        fill: #465f80;
+        mix-blend-mode: multiply;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-4" width="1080" height="70"/>
+    </clipPath>
+  </defs>
+  <g class="cls-2">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="_レイアウト" data-name="レイアウト">
+        <g>
+          <g class="cls-3">
+            <image class="cls-1" width="800" height="450" transform="translate(0 -331.64) scale(1.35)" xlink:href="\\192.168.50.254\Public\12.Salus\046.20231207_lavie-clinic\New\20231208\La Vie clinicPARTS\parts\28180399_m.jpg"/>
+          </g>
+          <rect class="cls-5" width="1080" height="70"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
