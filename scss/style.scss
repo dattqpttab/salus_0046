@@ -3,34 +3,36 @@
 
 :root {
     //--f-times : "Times New Roman", serif;
-//--f-meiryo : Meiryo, arial, clean, verdana, 'Hiragino Kaku Gothic Pro', "ＭＳ Ｐゴシック", Osaka, sans-serif;
+    //--f-meiryo : Meiryo, arial, clean, verdana, 'Hiragino Kaku Gothic Pro', "ＭＳ Ｐゴシック", Osaka, sans-serif;
 
 
-//--f-1P : 'M PLUS 1p', sans-serif;
-//--f-rounded : 'M PLUS Rounded 1c', sans-serif;
-//--f-kosugi : 'Kosugi Maru', sans-serif;
---f-notosans : 'Noto Sans JP', sans-serif;
---f-jp : 'Noto Serif JP', serif;
---f-en : 'Lato', sans-serif;
---f-mincho : "遊明朝 Yumincho", "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
---f-gothic: '游ゴシック体', 'Yu Gothic', 'YuGothic', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif
---f-cormorant: 'Cormorant', serif;
-//--f-zennew : 'Zen Kaku Gothic New', sans-serif;
-//--f-open : 'Open Sans', sans-serif;
+    //--f-1P : 'M PLUS 1p', sans-serif;
+    //--f-rounded : 'M PLUS Rounded 1c', sans-serif;
+    //--f-kosugi : 'Kosugi Maru', sans-serif;
+    // --f-notosans: 'Noto Sans JP', sans-serif;
+    --f-notosans : 'Noto Sans JP', sans-serif;
+    --f-jp : 'Noto Serif JP', serif;
+    --f-en : 'Lato', sans-serif;
+    --f-mincho : "遊明朝 Yumincho", "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+    --f-gothic: '游ゴシック体', 'Yu Gothic', 'YuGothic', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    --f-cormorant:'Cormorant', serif;
+    --f-cinzel:  'Cinzel', serif;
+    //--f-zennew : 'Zen Kaku Gothic New', sans-serif;
+    //--f-open : 'Open Sans', sans-serif;
 
-//--f-tangerine : 'Tangerine', cursive;
-//--f-varela : 'Varela Round', sans-serif;
-//--f-allura : 'Allura', cursive;
-//--f-bilbo : 'Bilbo Swash Caps', cursive;
-//--f-poppins : 'Poppins', sans-serif;
-//--f-julius : 'Julius Sans One', sans-serif;
+    //--f-tangerine : 'Tangerine', cursive;
+    //--f-varela : 'Varela Round', sans-serif;
+    //--f-allura : 'Allura', cursive;
+    //--f-bilbo : 'Bilbo Swash Caps', cursive;
+    //--f-poppins : 'Poppins', sans-serif;
+    //--f-julius : 'Julius Sans One', sans-serif;
 
-//--f-robo : 'Roboto', sans-serif;
-    --main-color: #ccc;
+    //--f-robo : 'Roboto', sans-serif;
+    --main-color: #465f80;
     --clr1: #464646;
     --clr2: #ccc;
     --ttl_size: 30px;
-    --u1:#465f80;
+    --u1: #465f80;
     --wrapper: 100px;
 }
 
@@ -80,11 +82,6 @@
 }
 
 body {
-    @include scrollbar(block,
-        linear-gradient(to bottom, var(--clr2) 0%, var(--main-color) 50%, var(--clr2) 100%),
-        linear-gradient(to bottom, var(--clr2) 0%, var(--main-color) 50%, var(--clr2) 100%),
-        #fff,
-        rgba(0, 0, 0, 0.5));
     background-color: #ffffff;
     -webkit-text-size-adjust: none;
     letter-spacing: 0.1em;
@@ -123,7 +120,8 @@ aside,
 nav,
 main,
 article,
-figure,picture {
+figure,
+picture {
     display: block;
     padding: 0;
     margin: 0;
@@ -162,6 +160,7 @@ a.tel_click {
             opacity: 0.7;
         }
     }
+
     a.tel_click {
         pointer-events: none;
     }
@@ -217,6 +216,7 @@ p {
     margin-bottom: 15px;
     font-size: 14px;
     letter-spacing: 0;
+
     &:empty {
         display: none !important;
     }
@@ -264,8 +264,8 @@ html {
 .inner,
 .inner_sm {
     margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .inner_big {
@@ -534,11 +534,11 @@ a {
                     visibility: visible;
                 }
 
-            
+
             }
         }
 
-      
+
     }
 
     .TabPager {
@@ -552,12 +552,12 @@ a {
             align-items: center;
             justify-content: center;
             text-align: center;
-       
+
             position: relative;
             margin: 0;
             padding: 9px 20px;
             box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.4);
-   width: calc(33.33% - 1px);
+            width: calc(33.33% - 1px);
             transition: all 0.3s ease;
             cursor: pointer;
             color: #797b7d;
@@ -569,7 +569,7 @@ a {
             &.active {
                 background-color: #edf0f5;
                 z-index: 1;
-          
+
             }
         }
     }
@@ -593,8 +593,9 @@ a {
     letter-spacing: 0 !important;
 }
 
-figure ,picture{
- 
+figure,
+picture {
+
     text-align: center;
     line-height: 1;
 }
@@ -641,51 +642,52 @@ figure ,picture{
 
 
 .tel_click {
-	text-decoration: none;
+    text-decoration: none;
 
-	span {
-		display: flex;
-		align-items: center;
-		font-family: var(--f-en);
-		font-weight: 700;
-		color: var(--main-color);
-		letter-spacing: 0.05em;
-		font-size: 1.5em;
+    span {
+        display: flex;
+        align-items: center;
+        font-family: var(--f-en);
+        font-weight: 700;
+        color: var(--main-color);
+        letter-spacing: 0.05em;
+        font-size: 1.5em;
 
-		&::before {
-			content: "";
-			display: block;
-			margin-right: 0.3214em;
-			margin-top: 0.1786em;
-			width: 0.893em;
-			height: 0.893em;
-			
-			--mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 101' %3E%3Cpath d='M97.829,82.824 C98.198,91.823 96.073,94.826 87.308,97.205 C74.144,100.791 61.788,98.752 50.561,91.066 C33.671,79.497 19.384,65.207 7.912,48.225 C-0.287,36.096 -1.826,22.855 2.769,8.952 C4.752,2.953 8.059,0.771 14.407,0.925 C23.639,1.157 23.633,1.157 26.561,10.079 C27.869,14.063 29.100,18.078 30.561,22.007 C32.367,26.859 31.432,30.918 27.914,34.711 C22.303,40.765 22.378,40.854 26.680,47.891 C33.854,59.628 43.600,68.580 55.717,75.040 C57.758,76.123 59.178,76.250 60.774,74.416 C62.051,72.951 63.620,71.738 65.076,70.429 C68.123,67.696 71.576,66.743 75.537,68.072 C82.013,70.255 88.532,72.319 94.923,74.723 C96.087,75.162 97.048,76.900 97.511,78.240 C97.992,79.641 97.756,81.285 97.829,82.824 Z'/%3E%3C/svg%3E");
-			mask-image: var(--mask);
-			-webkit-mask-image: var(--mask);
-			mask-repeat: no-repeat;
-			-webkit-mask-repeat: no-repeat;
-			mask-size: 100% auto;
-			-webkit-mask-size: 100% auto;
-			mask-position: center;
-			-webkit-mask-position: center;
-			background-color: var(--main-color);
-		}
-	}
+        &::before {
+            content: "";
+            display: block;
+            margin-right: 0.3214em;
+            margin-top: 0.1786em;
+            width: 0.893em;
+            height: 0.893em;
+
+            --mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 101' %3E%3Cpath d='M97.829,82.824 C98.198,91.823 96.073,94.826 87.308,97.205 C74.144,100.791 61.788,98.752 50.561,91.066 C33.671,79.497 19.384,65.207 7.912,48.225 C-0.287,36.096 -1.826,22.855 2.769,8.952 C4.752,2.953 8.059,0.771 14.407,0.925 C23.639,1.157 23.633,1.157 26.561,10.079 C27.869,14.063 29.100,18.078 30.561,22.007 C32.367,26.859 31.432,30.918 27.914,34.711 C22.303,40.765 22.378,40.854 26.680,47.891 C33.854,59.628 43.600,68.580 55.717,75.040 C57.758,76.123 59.178,76.250 60.774,74.416 C62.051,72.951 63.620,71.738 65.076,70.429 C68.123,67.696 71.576,66.743 75.537,68.072 C82.013,70.255 88.532,72.319 94.923,74.723 C96.087,75.162 97.048,76.900 97.511,78.240 C97.992,79.641 97.756,81.285 97.829,82.824 Z'/%3E%3C/svg%3E");
+            mask-image: var(--mask);
+            -webkit-mask-image: var(--mask);
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-size: 100% auto;
+            -webkit-mask-size: 100% auto;
+            mask-position: center;
+            -webkit-mask-position: center;
+            background-color: var(--main-color);
+        }
+    }
 }
 
 .en {
-	font-family: var(--f-en);
+    font-family: var(--f-cormorant);
 }
+
 .btn a {
     &::after {
         @include before;
-        width: 0.777778em;
-        height: 12px;
+        width: 2.5em;
+        height: 2px;
         right: 20px;
         top: calc(50% - 6px);
 
-        --mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 12' %3E%3Cpath d='M12.444,5.999 L12.444,6.4 L13.999,5.999 L7.777,11.999 L6.222,11.0 L10.700,6.999 L0.0,6.999 L0.0,5.0 L10.578,5.0 L6.222,1.1 L7.777,0.0 L13.999,5.999 L12.444,5.999 Z'/%3E%3C/svg%3E");
+        --mask: url(../images/arrow_ico.svg);
         mask-image: var(--mask);
         -webkit-mask-image: var(--mask);
         mask-repeat: no-repeat;
@@ -705,30 +707,30 @@ figure ,picture{
 
     .btn {
         font-size: 1em;
+        border-right: 1px solid white;
 
         &.style01 {
             width: 100%;
             min-width: 180px;
-            max-width: 408px;
+            max-width: 390px;
             overflow: hidden;
 
             a {
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                min-height: 3.88889em;
-                padding: 1em;
+                justify-content: flex-start;
+                min-height: 3.636363em;
+                padding: 0 10px 0 2em;
                 position: relative;
-                font-size: 1.8em;
-                font-weight: 500;
-                letter-spacing: 0.1em;
-                line-height: 1.5;
+                font-size: 2.2em;
+                letter-spacing: 0;
+                line-height: 1.5909;
                 color: #fff;
                 text-decoration: none;
-                text-align: center;
-                background-color: var(--main-color);
+                background-color: transparent;
                 transition: all .3s;
-                border-radius: 40px;
+           
+
 
                 &::after {
                     background-color: #fff;
@@ -740,9 +742,7 @@ figure ,picture{
 
                 @include screen('min769') {
                     &:hover {
-
-                        background-color: var(--clr1);
-
+                        opacity: .8;
                         &::after {
                             right: 5px;
                         }
@@ -754,9 +754,13 @@ figure ,picture{
 
             &.md {
                 a {
-                    font-size: 16px;
-
-
+                    font-size: 2em;
+                    line-height: 1.25;
+                }
+            }
+            &.sm {
+                a {
+                    font-size: 1.8em;
                 }
             }
         }
@@ -774,6 +778,27 @@ figure ,picture{
         &.bg02 {
             a {
                 background-color: #f4bf0c;
+            }
+        }
+    }
+
+    &.mcol-2,
+    &.mcol-3{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+  
+    @include screen('min769') {
+        &.mcol-2 {
+            .btn {
+                width: calc(50% - 20px);
+                margin: 5px 10px;
+            }
+        }
+        &.mcol-3 {
+            .btn {
+                width: calc(33.3333333333%);
             }
         }
     }
