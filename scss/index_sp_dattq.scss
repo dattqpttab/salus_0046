@@ -1,19 +1,61 @@
 @media only screen and (max-width: 768px) {
+
     //components
-    .idx_gallery{
+    .idx_gallery {
         &.style02 {
             padding-left: 5vw;
-             ul li .img {
+
+            ul li .img {
                 width: 170px;
                 height: 125px;
                 margin-right: 10px;
-             }
+            }
         }
     }
 
     .idx12 {
         .idx12_heading {
             margin-bottom: 30px;
+            flex-direction: column;
+
+            h3 {
+                text-align: center;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .ttl {
+                text-align: center;
+                font-size: 9vw;
+            }
+        }
+
+        .idx_feature {
+            .btn-group {
+                margin-top: 40px;
+
+                .btn {
+                    // margin-left: 0;
+                    // margin-right: auto;
+                }
+            }
+        }
+
+        .feature_box {
+            min-height: 500px;
+
+            .box_content {
+                position: relative;
+                height: 100%;
+                padding: 40px 20px !important;
+            }
+
+            .filter {
+
+                &:before {
+                    font-size: 30vw;
+                }
+            }
         }
     }
 
@@ -22,7 +64,7 @@
         margin-top: 50px;
 
         .idx13_head {
-            margin-bottom: 45px;
+            margin-bottom: 40px;
             margin-right: 0;
         }
     }
@@ -37,14 +79,19 @@
 
         .card {
             margin-bottom: 20px;
-            &:before {
+
+            &:before,
+            &:after {
                 width: 92%;
             }
+
             &:last-child {
                 margin-bottom: 0;
             }
+
             .card_footer {
                 margin-top: 10px;
+
                 .name {
                     font-size: 20px;
                 }
@@ -54,25 +101,46 @@
                 }
             }
         }
+
         .body_text {
             margin-top: 30px;
         }
 
-        .btn-group{
+        .btn-group {
             margin-top: 30px;
         }
     }
- 
+
 }
 
 @media only screen and (max-width: 640px) {
-.idx14 {
-    h3 {
-        margin-right: 0;
+    .idx13 {
+        .idx13_head {
+            flex-direction: column;
+        }
 
-        &.style02 .en {
-            font-size: 18vw;
+        .idx13_head_logo {
+            img {
+                max-width: 300px;
+            }
+        }
+
+        .idx13_head_content {
+            padding-top: 15px;
+            margin-left: 0;
+            margin-top: 30px;
+            border-left: none;
+            border-top: 1px solid white;
         }
     }
-}
+
+    .idx14 {
+        h3 {
+            margin-right: 0;
+
+            &.style02 .en {
+                font-size: 18vw;
+            }
+        }
+    }
 }
