@@ -167,20 +167,6 @@ font-size: 20px;
 @media only screen and (max-width: 375px) {}
 
 
-@media only screen and (max-width: 768px) {
-    .idx_gallery {
 
-
-        ul {
-            li {
-                .img {
-                    width: 225px;
-                    height: 500px;
-                    background-size: 100% auto;
-                }
-            }
-        }
-    }
-}
 
 @import "index_sp_dattq";

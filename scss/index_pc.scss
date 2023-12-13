@@ -268,7 +268,7 @@ section {
 
 @media only screen and (max-width: 1366px) and (min-width: 769px) {}
 
-@media only screen and (min-width: 769px) and (max-width: 1280px) {
+@media only screen and (min-width: 769px) and (max-width: 1000px) {
 
 	.home_page {
 		h3 {
@@ -280,19 +280,4 @@ section {
 	}
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 769px) {
-	:root {
-		--ttl_size: 24px;
-	}
-
-	.index05 {}
-}
-
-@media only screen and (max-width: 992px) and (min-width: 769px) {
-	:root {
-
-		--ttl_size: 22px;
-
-	}
-}
 @import "index_pc_dattq";

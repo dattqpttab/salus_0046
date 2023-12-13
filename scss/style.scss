@@ -682,10 +682,13 @@ picture {
 .btn a {
     &::after {
         @include before;
-        width: 2.5em;
+        width:3em;
+        max-width: 50px;
         height: 2px;
-        right: 20px;
-        top: calc(50% - 6px);
+        right: 1.6em;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
 
         --mask: url(../images/arrow_ico.svg);
         mask-image: var(--mask);
@@ -707,7 +710,11 @@ picture {
 
     .btn {
         font-size: 1em;
-        border-right: 1px solid white;
+        border-right: 1px solid;
+        border-color: white;
+        &:last-child {
+            border: none;
+        }
 
         &.style01 {
             width: 100%;
@@ -719,8 +726,9 @@ picture {
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
+                flex-wrap: wrap;
                 min-height: 3.636363em;
-                padding: 0 10px 0 2em;
+                margin: 0 10px 0 2em;
                 position: relative;
                 font-size: 2.2em;
                 letter-spacing: 0;
@@ -744,7 +752,7 @@ picture {
                     &:hover {
                         opacity: .8;
                         &::after {
-                            right: 5px;
+                            right: 1.3em;
                         }
                     }
                 }
@@ -756,6 +764,7 @@ picture {
                 a {
                     font-size: 2em;
                     line-height: 1.25;
+                    min-height: 2.5em;
                 }
             }
             &.sm {
@@ -764,14 +773,25 @@ picture {
                 }
             }
         }
-
+        &.color02 {
+            border-color: var(--clr1);
+            a {
+                color: var(--clr1);
+                &::after {
+                    background-color: var(--clr1);
+                }
+            }
+        }
 
         &.bg01 {
+       
             a {
                 background-color: transparent;
                 color: var(--main-color);
 
-                &::after {}
+                &::after {
+                    background-color: var(--clr1);
+                }
             }
         }
 
@@ -782,14 +802,15 @@ picture {
         }
     }
 
-    &.mcol-2,
-    &.mcol-3{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-  
+   
     @include screen('min769') {
+        &.mcol-2,
+        &.mcol-3{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+      
         &.mcol-2 {
             .btn {
                 width: calc(50% - 20px);
@@ -834,7 +855,7 @@ picture {
 
 /* Tablet
 -------------------------------------------*/
-@media only screen and (min-width: 769px) and (max-width: 1280px) {
+@media only screen and (min-width: 769px) and (max-width: 1000px) {
     body {
         font-size: 87.5%;
     }
@@ -858,6 +879,20 @@ picture {
         }
     }
 }
+
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+	:root {
+		--ttl_size: 24px;
+	}
+}
+
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+	:root {
+		--ttl_size: 22px;
+	}
+}
+
 
 
 

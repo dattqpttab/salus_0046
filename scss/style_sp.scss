@@ -20,12 +20,17 @@
     }
 
     :root {
-
-        --ttl_size: 24px;
+        --ttl_size: 26px;
         --wrapper: 60px;
     }
 }
 
+
+@media only screen and (max-width: 480px) {
+    :root {
+        --ttl_size: 24px;
+    }
+}
 /*
 *
 *
@@ -338,26 +343,28 @@ General
     .btn-group {
         font-size: 8.75px;
 
-        .btn {
+        &.mcol-2,
+        &.mcol-3 {
+            .btn {
+                margin-left: auto;
+                margin-right: auto;
+                border-right: none;
+                border-bottom: .5px solid;
+            }
+        }
 
+        .btn {
+            &:last-child {
+                margin-bottom: 0;
+                border: none;
+            }
             &.style01,
             &.style02 {
                 max-width: 280px;
 
                 a {
-
-
-                    &::after {}
-
-
-                }
-
-                &.md {
-                    min-width: 100px;
-
-                    a {
-                        min-height: 45px;
-                        font-size: 14px;
+                    &::after {
+                      right: 0;
                     }
                 }
             }
@@ -392,6 +399,22 @@ General
     }
 }
 
+
+@media only screen and (max-width: 768px) {
+    .idx_gallery {
+
+
+        ul {
+            li {
+                .img {
+                    width: 225px;
+                    height: 175px;
+                    background-size: 100% auto;
+                }
+            }
+        }
+    }
+}
 /* END General
 ********************************/
 /*

@@ -1,3 +1,40 @@
+//components
+.auto_br {
+	display: inline-block;
+}
+
+.idx_gallery {
+	&.style02 {
+		position: relative;
+		padding-left: 80px;
+
+		ul li {
+			.img {
+				width: 340px;
+				height: 250px;
+				margin-right: 30px;
+			}
+
+			@for $i from 1 to 7 {
+				.img0#{$i} {
+					background-image: url(../images/idx13_gallery0#{$i}.jpg);
+				}
+			}
+		}
+	}
+}
+
+//idx11-m
+.idx11 {
+	&.idx_gallery ul li {
+		@for $i from 1 to 8 {
+			.img0#{$i} {
+				background-image: url(../images/idx11_gallery0#{$i}.jpg);
+			}
+		}
+	}
+}
+
 //idx12-m
 .idx12 {
 
@@ -39,6 +76,13 @@
 
 		.btn-group {
 			width: 100%;
+			margin-left: -3.5vw;
+			margin-top: 80px;
+
+			.char {
+				width: 100%;
+				margin-left: -10px;
+			}
 		}
 	}
 
@@ -82,6 +126,7 @@
 			background-color: #465f80;
 			opacity: .2;
 		}
+
 		.box_content {
 			position: absolute;
 			z-index: 2;
@@ -161,13 +206,15 @@
 		}
 
 		&:nth-child(4) {
-	
+
 			&:before,
 			&:after {
 				clip-path: polygon(0 0, 12.1% 0, 100% 82%, 100% 100%, 0 100%);
 			}
+
 			.box_content {
 				justify-content: flex-end;
+				padding-bottom: 38px;
 			}
 		}
 
@@ -184,4 +231,208 @@
 
 
 	}
+}
+
+//idx13-m
+.idx13 {
+	padding: 100px 0 80px;
+	margin-top: 100px;
+	background: url(../images/idx13_bg.jpg) no-repeat center/cover;
+
+	.idx13_head {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-bottom: 91px;
+		margin-right: 4.8vw;
+
+		&_logo {}
+
+		&_content {
+			margin-left: 6.6vw;
+			padding: 10px 10px 15px 4vw;
+			border-left: 1px solid white;
+
+			ul li {
+				display: flex;
+				margin-bottom: 12px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				color: white;
+
+				letter-spacing: 0;
+
+				.ttl {
+					width: 6.25em;
+					margin-right: 1.25em;
+				}
+
+				.txt {
+					width: calc(100% - 6.25em - 1.25em);
+				}
+
+				.char {
+					margin-left: -.25em;
+					margin-right: -.25em;
+				}
+			}
+		}
+	}
+
+
+
+}
+
+//idx14-m
+.idx14 {
+	padding: 74px 0 40px;
+
+	background: url(../images/idx14_bg.jpg) repeat top left/205.714px auto;
+
+	h3 {
+		margin-right: 71px;
+		margin-left: auto;
+		margin-bottom: 86px;
+	}
+
+	.card-group {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		@include screen("min769") {
+			.card {
+				width: calc((100% - 7.4%) / 2);
+	
+				&:nth-child(2n - 1) {
+					margin-right: 7.4%;
+				}
+			}
+		}
+	}
+
+	.card {
+		position: relative;
+		z-index: 0;
+		max-width: 450px;
+		padding-left: 4.09%;
+		padding-bottom: 2%;
+		margin-bottom: 10px;
+
+		&:before {
+			@include before;
+			z-index: -1;
+			left: 0;
+			bottom: 0;
+			width: 89%;
+			height: 84.5%;
+			background-color: #e6e6e6;
+			mix-blend-mode: multiply;
+		}
+
+		.card_img {
+			text-align: right;
+		}
+
+		.card_footer {
+			position: relative;
+			margin-top: 16px;
+			margin-left: 7px;
+
+			.name {
+				font-size: 22px;
+				padding-right: 2.2727em;
+				min-width: 11.363em;
+				line-height: 1.3;
+				display: table;
+				background: url(../images/idx14_ico.svg) no-repeat right top 66%/1.36363em auto;
+
+			}
+
+			.jp {
+				border-bottom: .5px solid #464646;
+				letter-spacing: .2em;
+				display: block;
+			}
+
+			.en {
+				display: block;
+				font-size: 18px;
+				letter-spacing: 0;
+				text-align: right;
+				opacity: .5;
+
+				@include screen('min769') {
+					margin-top: -2px;
+				}
+
+			}
+		}
+	}
+
+	//nth child
+	.card {
+
+		&:nth-child(2n) {
+			padding-left: 0;
+			padding-right: 4.09%;
+
+			&:before {
+				left: auto;
+				right: 0;
+			}
+
+			.card_img {
+				text-align: left;
+			}
+
+			.card_footer {
+				.name {
+					margin-right: 5px;
+					margin-left: auto;
+				}
+			}
+		}
+	}
+
+	.idx14_body {
+		max-width: 1080px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.body_text {
+		margin-top: 54px;
+	}
+
+	.btn-group {
+		margin-top: 56px;
+		@include screen('min769') {
+			padding-left: 17px;
+		}
+		.btn {
+			@include screen('min769') {
+				max-width: 403px;
+
+				a {
+					margin-left: 1.55em;
+				}
+			}
+		}
+
+
+		.btn01 {
+			a {
+
+				@include screen('min769') {
+					margin-left: 7.2em;
+				margin-right: 1.78em;
+				}
+			}
+		}
+	}
+
 }
