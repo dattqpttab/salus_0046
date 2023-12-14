@@ -10,13 +10,13 @@
     //--f-rounded : 'M PLUS Rounded 1c', sans-serif;
     //--f-kosugi : 'Kosugi Maru', sans-serif;
     // --f-notosans: 'Noto Sans JP', sans-serif;
-    --f-notosans : 'Noto Sans JP', sans-serif;
-    --f-jp : 'Noto Serif JP', serif;
-    --f-en : 'Lato', sans-serif;
-    --f-mincho : "遊明朝 Yumincho", "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+    --f-notosans: 'Noto Sans JP', sans-serif;
+    --f-jp: 'Noto Serif JP', serif;
+    --f-en: 'Lato', sans-serif;
+    --f-mincho: "遊明朝 Yumincho", "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
     --f-gothic: '游ゴシック体', 'Yu Gothic', 'YuGothic', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-    --f-cormorant:'Cormorant', serif;
-    --f-cinzel:  'Cinzel', serif;
+    --f-cormorant: 'Cormorant', serif;
+    --f-cinzel: 'Cinzel', serif;
     //--f-zennew : 'Zen Kaku Gothic New', sans-serif;
     //--f-open : 'Open Sans', sans-serif;
 
@@ -682,8 +682,7 @@ picture {
 .btn a {
     &::after {
         @include before;
-        width:3em;
-        max-width: 50px;
+        width: 3em;
         height: 2px;
         right: 1.6em;
         top: 0;
@@ -712,6 +711,7 @@ picture {
         font-size: 1em;
         border-right: 1px solid;
         border-color: white;
+
         &:last-child {
             border: none;
         }
@@ -737,7 +737,7 @@ picture {
                 text-decoration: none;
                 background-color: transparent;
                 transition: all .3s;
-           
+
 
 
                 &::after {
@@ -751,6 +751,7 @@ picture {
                 @include screen('min769') {
                     &:hover {
                         opacity: .8;
+
                         &::after {
                             right: 1.3em;
                         }
@@ -767,16 +768,20 @@ picture {
                     min-height: 2.5em;
                 }
             }
+
             &.sm {
                 a {
                     font-size: 1.8em;
                 }
             }
         }
+
         &.color02 {
             border-color: var(--clr1);
+
             a {
                 color: var(--clr1);
+
                 &::after {
                     background-color: var(--clr1);
                 }
@@ -784,7 +789,7 @@ picture {
         }
 
         &.bg01 {
-       
+
             a {
                 background-color: transparent;
                 color: var(--main-color);
@@ -800,23 +805,45 @@ picture {
                 background-color: #f4bf0c;
             }
         }
+
+        &.style02 {
+            min-width: 100%;
+            max-width: 100%;
+            text-align: right;
+
+            a {
+                min-width: 100%;
+                padding-right: 50px;
+                margin: 0;
+                font-family: var(--f-cormorant);
+                font-size: calc(var(--ttl_size) - 12px);
+                display: inline;
+
+                &::after {
+                    --mask: url(../images/idx_icon_arrow_after.png);
+                    width: 20px;
+                }
+            }
+        }
     }
 
-   
+
     @include screen('min769') {
+
         &.mcol-2,
-        &.mcol-3{
+        &.mcol-3 {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-      
+
         &.mcol-2 {
             .btn {
                 width: calc(50% - 20px);
                 margin: 5px 10px;
             }
         }
+
         &.mcol-3 {
             .btn {
                 width: calc(33.3333333333%);
@@ -882,15 +909,15 @@ picture {
 
 
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
-	:root {
-		--ttl_size: 24px;
-	}
+    :root {
+        --ttl_size: 24px;
+    }
 }
 
 @media only screen and (max-width: 992px) and (min-width: 769px) {
-	:root {
-		--ttl_size: 22px;
-	}
+    :root {
+        --ttl_size: 22px;
+    }
 }
 
 
