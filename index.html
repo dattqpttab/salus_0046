@@ -153,15 +153,6 @@
 
 		<div id="mainContent">
 			<!--component-->
-			<section class="">
-				<div class="inner">
-					<h3><span class="en">Feature</span>当院の特徴</h3>
-					<h3 class="style02 en-right"><span class="en">Doctor<br>introduction</span><span
-							class="jp">ご挨拶</span></h3>
-					<h3 class="style02"><span class="en">Regenerative<br>medicine</span><span class="jp">再生医療</span>
-					</h3>
-				</div>
-			</section>
 			<!---->
 			<!---->
 			<!---->
@@ -199,7 +190,7 @@
 										<a href="#">スレッドリフト</a>
 									</p>
 									<p class="btn btn04 style01 md">
-										<a href="#">ほくろ、イボ、脂腺腫</a>
+										<a href="#">ほくろ、イボ、<span class="auto_br">脂腺腫</span></a>
 									</p>
 									<p class="btn btn05 style01 md txt_cter">
 										<a href="#">クマとり<br>
@@ -272,7 +263,7 @@
 										<a href="#">小顔</a>
 									</p>
 									<p class="btn btn07 style01 md">
-										<a href="#">メディカルダイエット</a>
+										<a href="#">メディカル<span class="auto_br">ダイエット</span></a>
 									</p>
 									<p class="btn btn08 style01 md">
 										<a href="#">AGA</a>
@@ -782,7 +773,7 @@
 				slidesToScroll: 1,
 				accessibility: false,
 				infinite: true,
-				autoplay: false,
+				autoplay: true,
 				autoplaySpeed: 4000,
 				cssEase: 'linear',
 				pauseOnHover: false,
@@ -793,7 +784,6 @@
 					breakpoint: 768,
 					settings: {
 						slidesToShow: 2,
-						speed: 6000,
 					}
 				},]
 			});

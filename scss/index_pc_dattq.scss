@@ -27,6 +27,7 @@
 .btn {
 	a {
 		text-align: center;
+		padding-right: 2.8em;
 
 		&:after {
 			max-width: 50px;
@@ -58,7 +59,7 @@
 
 //idx07
 .idx07 {
-	margin: 60px 0 70px;
+	margin: 100px 0 ;
 	height: 400px;
 	background: url(../images/idx07_bg.jpg) center/cover no-repeat;
 	
@@ -73,7 +74,13 @@
 		&.style02 .en {
 			color: white;
 			opacity: .3;
+
+			@media only screen and (min-width:769px) and (max-width:1280px) {
+				font-size: 11.72vw;
+			}
 		}
+
+
 	}
 
 	.box {
@@ -93,7 +100,7 @@
 			position: relative;
 			z-index: 1;
 			padding: 15px 3.9vw 0 10.1vw;
-			width: 59.4%;
+			width: 60.2%;
 			background-color: #cacac5;
 
 			.box_body {
@@ -101,13 +108,12 @@
 
 				>.btn-group {
 					margin-top: -3px;
-					margin-right: -3.4vw;
+					margin-right: -2.56vw;
 				}
 			}
 
 			.btn-group {
 				.btn {
-					border-color: var(--clr1);
 
 					&:last-child {
 						border: none !important;
@@ -122,10 +128,7 @@
 					}
 
 					&.md {
-						border: none;
-						border-bottom: 1px solid var(--clr1);
-						margin: 0 20px;
-
+				
 						a {
 							margin-top: .55em;
 							margin-bottom: .4em;
@@ -134,7 +137,8 @@
 
 					&.sm {
 						max-width: 200px;
-						margin: 0 10px 0 auto;
+						margin: 0;
+						margin-left: auto;
 
 						a {
 							margin-left: 3.1111em;
@@ -150,8 +154,8 @@
 
 
 				@include screen('min769') {
+				
 					.btn {
-						max-width: 270px;
 
 						a {
 							&:after {
@@ -168,10 +172,14 @@
 
 					&.mcol-2 {
 						justify-content: flex-start;
+						
 
 						.btn {
 							width: calc((100% - 40px) / 2);
 							margin: 0 40px 0 0;
+							max-width: 270px;
+							border: none;
+							border-bottom: 1px solid;
 
 							&:nth-child(2n) {
 								margin-right: 0;
@@ -179,12 +187,18 @@
 						}
 					}
 				}
+				@media only screen and (min-width:769px) and (max-width:1280px) {
+					&.mcol-2  {
+						font-size: .78vw;
+					}
+				
+				}
 			}
 		}
 
 		.box_img {
 			position: relative;
-			width: 40.6%;
+			width: 39.8%;
 			background: url(../images/idx08_bg01.jpg) no-repeat center/cover;
 
 			&:after {
@@ -204,7 +218,7 @@
 	.box {
 		&.b1 {
 			.box_img {
-				background-position: right 75% center;
+				background-position: right 75.5% center;
 			}
 
 			.box_inner>.btn-group {
@@ -242,6 +256,7 @@
 
 				.btn04 a {
 					margin-left: 0;
+					justify-content: center;
 				}
 
 				.btn05 a {
@@ -286,7 +301,7 @@
 
 			@include screen("min769") {
 				.box_img {
-					background-position: left 69% center;
+					background-position: left 67.5% center;
 				}
 
 				.box_ct {
@@ -333,6 +348,7 @@
 
 			.btn07 a {
 				margin-left: 0;
+				justify-content: center;
 			}
 
 			.btn08 a {
@@ -353,7 +369,7 @@
 
 			@include screen("min769") {
 				.box_img {
-					background-position: left 70% center;
+					background-position: right 81.2% center;
 				}
 
 				.box_ct {
@@ -471,7 +487,7 @@
 //idx10-m
 .idx10 {
 	margin-top: 60px;
-	margin-bottom: 90px;
+	margin-bottom: 100px;
 
 	.inner_big {
 		padding: 0;
@@ -579,8 +595,20 @@
 .idx12 {
 
 	h3 {
-		margin-right: 9vw;
+		z-index: 1;
 		margin-bottom: 0;
+		&:before {
+			@include before;
+			z-index: -1;
+			height: 164%;
+			width: 100%;
+			bottom: 0;
+			left: 0;
+			background-color: white;
+			opacity: .8;
+
+		}
+
 	}
 
 	.ttl {
@@ -594,19 +622,24 @@
 	}
 
 	.inner_big {
-		padding-right: 0;
+		padding: 0;
 
 	}
 
 	.idx12_heading {
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
+		justify-content: space-between;
 		margin-bottom: 54px;
 
-		h3 {}
+		h3 {
+			width: 55%;
+			max-width: 683px;
+			padding-left: 6.5%;
+		}
 
 		.ttl {
+			width:45%;
 			text-align: right;
 			// font-size: 4.7vw;
 
@@ -629,6 +662,12 @@
 			.char {
 				width: 100%;
 				margin-left: -10px;
+			}
+
+			&.mcol-3 {
+				.btn a {
+					text-align: left;
+				}
 			}
 		}
 	}
@@ -1002,15 +1041,22 @@
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
 	.idx12 {
 		.idx12_heading {
-			h3 {
-				width: 35%;
-			}
 
 			.ttl {
 				font-size: 4.7vw;
 				display: block;
-				width: calc(65% - 14vw);
+			}
+		}
 
+		.idx_feature {
+			.btn-group {
+				&.mcol-3 {
+					font-size: .78vw;
+
+					a {
+						padding-right: 0;
+					}
+				}
 			}
 		}
 	}
@@ -1037,6 +1083,16 @@
 	}
 
 	.idx12 {
+		.idx12_heading {
+			h3 {
+				width: 48%;
+				padding-left: 4vw;
+			}
+
+			.ttl {
+				width: 50%;
+			}
+		}
 
 		.idx_feature {
 			.btn-group {
@@ -1056,8 +1112,9 @@
 
 @media only screen and (max-width: 920px) and (min-width: 769px) {
 	.idx08 {
+	
 		.box {
-			flex-direction: column;
+			flex-direction: column-reverse;
 
 			.box_img {
 				width: 100%;

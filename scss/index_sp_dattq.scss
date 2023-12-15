@@ -19,8 +19,14 @@
     }
 
     .idx08 {
+        h3 {
+            .en,
+            &.style02 .en {
+                font-size: 14vw;
+            }
+        }
         .box {
-            flex-direction: column;
+            flex-direction: column-reverse;
 
             .box_img {
                 width: 100%;
@@ -30,9 +36,33 @@
             .box_ct {
                 width: 100%;
                 padding: 30px 20px;
+
+                .box_body>.btn-group {
+                    margin-right: 0;
+                }
+
+                .btn-group {
+                    font-size: 8px;
+                    .btn.sm a{
+                        font-size: 16px;
+                    }
+                    &.mcol-2 {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+
+                        .btn {
+                            width: calc(50% - 10px);
+                            margin: 0 20px 0 0;
+
+                            &:nth-child(2n){
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
             }
         }
-
     }
 
     .idx09 {
@@ -88,9 +118,15 @@
                 text-align: center;
                 margin-right: 0;
                 margin-bottom: 10px;
+                padding: 0 30px;
+
+                &:before {
+                    height: 140%;
+                }
             }
 
             .ttl {
+                width: 100%;
                 text-align: center;
                 font-size: 9vw;
             }
@@ -100,8 +136,25 @@
             .btn-group {
                 margin-top: 40px;
 
+                &.mcol-3 {
+                    margin-left: 0;
+                    font-size: 7px;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
                 .btn {
-                    // margin-left: 0;
+                    margin-left: 0;
+                   width: calc(50% - 20px);
+                   margin-right: 20px;
+                   &:nth-child(2n) {
+                    margin-right: 0;
+                   }
+
+                   a {
+                    margin-left: 1em;
+                   }
+            
                     // margin-right: auto;
                 }
             }
@@ -174,6 +227,10 @@
 
         .btn-group {
             margin-top: 30px;
+
+            .btn a {
+                margin-left: 1em;
+            }
         }
     }
 
@@ -210,8 +267,38 @@
         }
     }
 }
+@media only screen and (max-width: 580px) {
+    .idx12 {
+        .idx_feature {
+            .btn-group.mcol-3 {
+                .btn {
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 520px){
+    .idx08 {
+      
+        .box {
+            .box_ct {
+                .btn-group {
 
+                    &.mcol-2 {
+                        .btn {
+                            width: 100%;
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media only screen and (max-width: 425px) {
+    
     .idx10 {
         .card-group .card {
             width: 100%;
